@@ -59,6 +59,7 @@
             <div id="exam" class="collapse">
             <!-- <HINT> If user is authenticated, show course exam with a list of question -->
             {% if user.is_authenticated %}
+                <h1>All the best {{ user.username }}!</h1>
                 <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                     {% for question in course.question_set.all %}
                     <div class="card mt-1">
